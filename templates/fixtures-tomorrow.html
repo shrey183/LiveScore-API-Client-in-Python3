@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+    <h1>Tomorrow's Fixtures</h1>
+
+    <table id='table'>
+        <thead id='th'>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Round</th>
+            <th>Home Name</th>
+            <th>Away Name</th>
+            <th>Location</th>
+            <th>League Id</th>
+        </tr>
+        </thead>
+        <tbody id="tb">
+            {%for dict in data%}
+            <tr>
+                <td>{{dict['date']}}</td>
+                <td>{{dict['time']}}</td>
+                <td>{{dict['round']}}</td>
+                <td>{{dict['home_name']}}</td>
+                <td>{{dict['away_name']}}</td>
+                <td>{{dict['location']}}</td>
+                <td>{{dict['league_id']}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+
+
+
+</body>
+</html>

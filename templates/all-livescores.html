@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+            </style>
+</head>
+<body>
+    <h1>All Livescores</h1>
+    <table id='table'>
+            <thead id='th'>
+            <tr>
+                <th>Added</th>
+                <th>Away Id</th>
+                <th>Away Name</th>
+                <th>Et Score</th>
+                <th>Events</th>
+                <th>Ft Score</th>
+                <th>Home Id</th>
+                <th>Home Name</th>
+                <th>Ht Score</th>
+                <th>Id</th>
+                <th>Last Changed</th>
+                <th>League Id</th>
+                <th>League Name</th>
+                <th>Score</th>
+                <th>Status</th>
+                <th>Time </th>
+            </tr>
+            </thead>
+            <tbody id="tb">
+                {%for dict in data%}
+                <tr>
+                    <td>{{dict['added']}}</td>
+                    <td>{{dict['away_id']}}</td>
+                    <td>{{dict['away_name']}}</td>
+                    <td>{{dict['et_score']}}</td>
+                    <td>{{dict['events']}}</td>
+                    <td>{{dict['ft_score']}}</td>
+                    <td>{{dict['home_id']}}</td>
+                    <td>{{dict['home_name']}}</td>
+                    <td>{{dict['ht_score']}}</td>
+                    <td>{{dict['id']}}</td>
+                    <td>{{dict['last_changed']}}</td>
+                    <td>{{dict['league_id']}}</td>
+                    <td>{{dict['league_name']}}</td>
+                    <td>{{dict['score']}}</td>
+                    <td>{{dict['status']}}</td>
+                    <td>{{dict['time']}}</td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    
+
+</body>
+</html>
